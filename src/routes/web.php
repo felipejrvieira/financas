@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContaController;
+use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\MovimentacaoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +19,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
+Route::resources([
+    'contas' => ContaController::class,
+    'categorias' => CategoriaController::class,
+]);
+
+Route::resource('movimentacoes', MovimentacaoController::class)->parameters(['movimentacoes'=>'movimentacao']);
