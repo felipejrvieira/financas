@@ -10,4 +10,9 @@ class Conta extends Model
     use HasFactory;
 
     protected $fillable = ['descricao'];
+
+    public function movimentacoes()
+    {
+        return $this->hasMany(Movimentacao::class);
+    }
 }

@@ -12,4 +12,15 @@ class Movimentacao extends Model
     protected $table = 'movimentacoes';
 
     protected $fillable = ['conta_id', 'categoria_id', 'efetuado_em', 'valor', 'comentario'];
+
+    public function conta()
+    {
+        return $this->belongsTo(Conta::class);
+    }
+
+    public function categoria()
+    {
+        return $this->belongsTo(Categoria::class);
+    }
+
 }

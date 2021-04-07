@@ -17,7 +17,7 @@ use App\Http\Controllers\MovimentacaoController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 

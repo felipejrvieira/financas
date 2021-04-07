@@ -12,6 +12,7 @@
                     @csrf 
                     @method('DELETE')
                     <button class="btn btn-danger" type="submit">Excluir</button>
+                    <a class="btn btn-secondary" href="{{ route('contas.show',['conta'=> $conta->id]) }}">Detalhar</a>
                     <strong>{{$conta->descricao}}</strong>
                 </li>
             </form>

@@ -12,7 +12,7 @@
                     @csrf 
                     @method('DELETE')
                     <button class="btn btn-danger" type="submit">Excluir</button>
-                    <strong>{{$movimentacao->descricao}}</strong>
+                    <strong>{{$movimentacao->conta->descricao}} | {{$movimentacao->categoria->descricao}} | {{$movimentacao->valor}} | {{$movimentacao->efetuado_em}} | {{$movimentacao->comentario}}</strong>
                 </li>
             </form>
             

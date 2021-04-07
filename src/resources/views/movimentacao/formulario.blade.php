@@ -27,8 +27,16 @@
         </select>
     </div>   
     <div class="mb-3">
-    <label for="descricao" class="form-label">Insira a movimentacao:</label>
-    <input type="text" class="form-control" id="descricao" name="descricao" placeholder="Descricão da movimentacao" value="{{$movimentacao->descricao ?? ''}}">
+    <label for="efetuado_em" class="form-label">Data da movimentacao:</label>
+    <input type="date" class="form-control" id="efetuado_em" name="efetuado_em" placeholder="Data da movimentacao" value="{{$movimentacao->efetuado_em ?? ''}}">
+    </div>
+    <div class="mb-3">
+    <label for="valor" class="form-label">Valor da movimentacao:</label>
+    <input type="text" class="form-control" id="valor" name="valor" placeholder="Valor da movimentacao" value="{{$movimentacao->valor ?? ''}}">
+    </div>
+    <div class="mb-3">
+    <label for="comentario" class="form-label">Comentário:</label>
+    <input type="text" class="form-control" id="comentario" name="comentario" placeholder="Comentário da movimentacao" value="{{$movimentacao->comentario ?? ''}}">
     </div>
     <button type="submit" class="btn btn-primary">Salvar</button>
     <button type="button" onclick="history.go(-1);" class="btn btn-secondary">Voltar</button>

@@ -53,7 +53,7 @@ class ContaController extends Controller
     public function show($id)
     {
         $conta = Conta::find($id);
-        return $conta->toJson();
+        return view('conta.detalhe', ['conta' => $conta]);
     }
 
     /**

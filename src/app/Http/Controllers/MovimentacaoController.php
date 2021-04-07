@@ -40,7 +40,11 @@ class MovimentacaoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //$conta = new Conta($request->all());
+        //$conta->save();
+        Movimentacao::create($request->all());
+
+        return redirect()->route('movimentacoes.index');
     }
 
     /**
